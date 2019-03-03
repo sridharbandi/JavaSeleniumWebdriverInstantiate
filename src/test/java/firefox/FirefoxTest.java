@@ -18,7 +18,7 @@ public class FirefoxTest {
     @BeforeEach
     public void setUp() {
         //Set the path of geckodriver. replace with geckodriver path. Use can use below any System property
-        System.setProperty("webdriver.gecko.driver", "./driver/geckodriver");
+        //System.setProperty("webdriver.gecko.driver", "./driver/geckodriver");
         //OR
         System.setProperty(GeckoDriverService.GECKO_DRIVER_EXE_PROPERTY, "./driver/geckodriver");
         //FirefoxDriver instantiation

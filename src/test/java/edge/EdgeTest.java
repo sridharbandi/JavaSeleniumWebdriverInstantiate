@@ -1,4 +1,4 @@
-package internetexplorer;
+package edge;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -6,23 +6,23 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.ie.InternetExplorerDriverService;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeDriverService;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class IETest {
+public class EdgeTest {
 
     WebDriver driver;
 
     @BeforeEach
     public void setUp() {
-        //Set the path of IEDriverServer. replace with IEDriverServer path. Use can use below any System property
-       // System.setProperty("webdriver.ie.driver", "./driver/IEDriverServer.exe");
+        //Set the path of MicrosoftWebDriver. replace with MicrosoftWebDriver path. Use can use below any System property
+        //System.setProperty("webdriver.edge.driver", "./driver/MicrosoftWebDriver.exe");
         //OR
-        System.setProperty(InternetExplorerDriverService.IE_DRIVER_EXE_PROPERTY, "./driver/IEDriverServer.exe");
-        //InternetExplorerDriver instantiation
-        WebDriver driver = new InternetExplorerDriver();
+        System.setProperty(EdgeDriverService.EDGE_DRIVER_EXE_PROPERTY, "./driver/MicrosoftWebDriver.exe");
+        //EdgeDriver instantiation
+        driver = new EdgeDriver();
         //Maximizes the browser
         driver.manage().window().maximize();
         //Open the URL
