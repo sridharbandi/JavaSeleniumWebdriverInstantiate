@@ -1,4 +1,4 @@
-package opera;
+package safari;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -6,23 +6,18 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.opera.OperaDriver;
-import org.openqa.selenium.opera.OperaDriverService;
+import org.openqa.selenium.safari.SafariDriver;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class OperaTest {
+public class SafariTest {
 
     WebDriver driver;
 
     @BeforeEach
     public void setUp() {
-        //Set the path of operadriver. replace with operadriver path. Use can use below any System property
-        System.setProperty("webdriver.opera.driver", "./driver/operadriver");
-        //OR
-        System.setProperty(OperaDriverService.OPERA_DRIVER_EXE_PROPERTY, "./driver/operadriver");
-        //OperaDriver instantiation
-        driver = new OperaDriver();
+        //SafariDriver instantiation
+        WebDriver driver = new SafariDriver();
         //Maximizes the browser
         driver.manage().window().maximize();
         //Open the URL
